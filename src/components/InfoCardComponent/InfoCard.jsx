@@ -7,7 +7,9 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-export default function InfoCard({ data, texto }) {
+import CreateTaskComponent from "../CreateTaskComponent/CreateTaskComponent";
+
+export default function InfoCard({ data }) {
   const receivedData = JSON.parse(data);
 
   if (!data || data.length === 0) {
@@ -20,6 +22,7 @@ export default function InfoCard({ data, texto }) {
     voice.lang = "es-ES";
     synth.speak(voice);
   };
+
   console.log(receivedData);
   return (
     <div
@@ -83,6 +86,16 @@ export default function InfoCard({ data, texto }) {
               >
                 {element.origin.name}
               </Typography>
+              <CreateTaskComponent
+                actualData={{
+                  taskName: element.name,
+                  data: {
+                    id: element.id,
+                    name: element.name,
+                    status: element.status,
+                  },
+                }}
+              />
             </CardFooter>
           </Card>
         );

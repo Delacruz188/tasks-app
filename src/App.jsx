@@ -15,7 +15,7 @@ function App() {
           "https://rickandmortyapi.com/api/character"
         );
         setData(JSON.stringify(response.data.results, null, 2));
-        // console.log(response.data.results);
+        // console.log(response);
       } catch (err) {
         setError(err.message);
       }
@@ -24,7 +24,7 @@ function App() {
     fetchData();
   }, []);
 
-  return <InfoCard data={data} texto={"Hola"} />;
+  return <InfoCard data={data} />;
 }
 
 export default App;
