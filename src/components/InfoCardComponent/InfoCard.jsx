@@ -23,7 +23,6 @@ export default function InfoCard({ data }) {
     synth.speak(voice);
   };
 
-  console.log(receivedData);
   return (
     <div
       style={{
@@ -93,6 +92,7 @@ export default function InfoCard({ data }) {
                     id: element.id,
                     name: element.name,
                     status: element.status,
+                    img: element.image,
                   },
                 }}
               />

@@ -15,7 +15,6 @@ function App() {
           "https://rickandmortyapi.com/api/character"
         );
         setData(JSON.stringify(response.data.results, null, 2));
-        // console.log(response);
       } catch (err) {
         setError(err.message);
       }
