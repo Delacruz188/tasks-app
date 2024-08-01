@@ -6,32 +6,11 @@ import {
   Button,
   CardBody,
   Chip,
-  CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
   Avatar,
-  IconButton,
-  Tooltip,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 
 export default function TasksListComponent() {
-  const TABS = [
-    {
-      label: "All",
-      value: "all",
-    },
-    {
-      label: "Monitored",
-      value: "monitored",
-    },
-    {
-      label: "Unmonitored",
-      value: "unmonitored",
-    },
-  ];
-
   const TABLE_HEAD = ["Usuario", "Tarea", "Status", "Opciones"];
 
   const [allTasks, setAllTasks] = useState([]);
@@ -44,6 +23,7 @@ export default function TasksListComponent() {
       const key = localStorage.key(i);
       // Obtener el valor asociado a la clave
       const value = JSON.parse(localStorage.getItem(key));
+      console.log(value);
 
       // Guardar el valor en la lista
       tasksReceivedList.push(value);
