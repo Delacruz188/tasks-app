@@ -11,25 +11,25 @@ const manifestForPlugIn = {
     description: "I am a simple vite app",
     icons: [
       {
-        src: "/android-chrome-192x192.png",
+        src: "./public/2.jpeg",
         sizes: "192x192",
         type: "image/png",
         purpose: "favicon",
       },
       {
-        src: "/android-chrome-512x512.png",
+        src: "./public/2.jpeg",
         sizes: "512x512",
         type: "image/png",
         purpose: "favicon",
       },
       {
-        src: "/apple-touch-icon.png",
+        src: "./public/2.jpeg",
         sizes: "180x180",
         type: "image/png",
         purpose: "apple touch icon",
       },
       {
-        src: "/maskable_icon.png",
+        src: "./public/2.jpeg",
         sizes: "512x512",
         type: "image/png",
         purpose: "any maskable",
