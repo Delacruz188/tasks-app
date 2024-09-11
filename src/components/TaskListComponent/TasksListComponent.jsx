@@ -14,6 +14,11 @@ export default function TasksListComponent() {
   const TABLE_HEAD = ["Usuario", "Tarea", "Status", "Opciones"];
 
   const [allTasks, setAllTasks] = useState([]);
+  const [showOnlineAlert, setShowOnlineAlert] = useState(navigator.onLine);
+
+  // const showAlert = () => {
+  //
+  // };
 
   useEffect(() => {
     const tasksReceivedList = [];
@@ -45,6 +50,7 @@ export default function TasksListComponent() {
       <Card className="h-full w-full" style={{}}>
         <CardHeader floated={false} shadow={false} className="rounded-none">
           <div className="mb-8 flex items-center justify-between gap-8">
+            {showAlert()}
             <div>
               <Typography variant="h3" color="blue-gray">
                 Lista de tareas asignadas a los usuarios
