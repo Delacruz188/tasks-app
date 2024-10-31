@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import InfoCard from "./components/InfoCardComponent/InfoCard";
 import NavbarComponent from "./components/NavbarComponent/NavbarComponent.jsx";
-import { Button } from "@material-tailwind/react";
+import NotificationSetup from "./PushNotifications/NotificationsSetup.jsx";
 function App() {
   const [data, setData] = useState(null);
 
@@ -17,6 +17,7 @@ function App() {
         );
         setData(JSON.stringify(response.data.results, null, 2));
       } catch (err) {
+        // eslint-disable-next-line no-undef
         setError(err.message);
       }
     };
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div>
+      <NotificationSetup />
       <div style={{ marginTop: "2rem" }}>
         <NavbarComponent />
       </div>
